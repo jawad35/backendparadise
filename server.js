@@ -15,7 +15,7 @@ app.use(cors());
 app.use("/api", require("./routes/userRoute"));
 app.use("/api", require("./routes/registerUserRoute"));
 app.use("/api", require("./routes/stripePayment"));
-
+app.use("/api", require("./routes/blogRoute"));
 // coupon routes
 let Coupons = require("./routes/Coupan");
 app.post("/api/coupancreate", Coupons.create);

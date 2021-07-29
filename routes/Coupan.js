@@ -3,7 +3,7 @@ const coupanCode = require("../Models/CouponSchema");
 const CoupanCrud = {
   create: async function (req, res) {
     const { code, discount } = req.body;
-
+    console.log(code, discount);
     try {
       let user = await new coupanCode({
         code,

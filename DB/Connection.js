@@ -4,8 +4,8 @@ const connectDB = () => {
   try {
     mongoose
       .connect(
-        process.env.MONGODB_URL,
-        "mongodb+srv://admin:admin@carparking.vtric.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+        process.env.MONGODB_URL ||
+          "mongodb+srv://admin:admin@carparking.vtric.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
         {
           useNewUrlParser: true,
           useUnifiedTopology: true,
